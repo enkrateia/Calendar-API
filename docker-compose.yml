@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: ./
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - '8000:8000'
+
+  db:
+    image: mongo
+

@@ -2,6 +2,7 @@ FROM node
 WORKDIR /usr/src/app
 COPY package.json .
 RUN npm install
-EXPOSE 8080
+RUN npm install -g nodemon
+EXPOSE 8000
 CMD [ "npm", "start" ]
 COPY . .
